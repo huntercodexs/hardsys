@@ -44,9 +44,9 @@
 
     </dependencies>
 
-    <!--Using to library usage-->
     <build>
         <plugins>
+            <!--Using to pack all dependencies in one single jar file-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -62,6 +62,21 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!--Make jar executable-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.huntercodexs.hardsys.Application</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
