@@ -132,6 +132,12 @@ You can run this program via cli passing the commands available in this document
 sudo ${JAVA_HOME}/java -jar hardsys-1.0.0-SNAPSHOT.jar {{arg1}} {{arg2}} {{arg3}}
 </pre>
 
+or execute the following command as well
+
+<pre>
+sudo ${JAVA_HOME}/java -cp hardsys-1.0-SNAPSHOT.jar {{MAIN-CLASS-PAH}} {{arg1}} {{arg2}} {{arg3}}
+</pre>
+
 Where:
 <pre>
 arg1 = [inxi, hwinfo, lshw...] 
